@@ -4,7 +4,7 @@ Leather : Wood/Stone -> Chain : Copper/Gold -> Iron : Iron/Bronze -> Steel : Ste
 
 Less Durability -> Different tools have different advantages (gold tools have a use now!)
 
-===========
+===============
 
 Upgrades:
 
@@ -16,7 +16,7 @@ Raw copper tools -> Smelt copper on a campfire -> Use copper to make a furnace (
 
 Steel requires blast furnace which now requires Bronze
 
-
+===============
 
 =====//   Crafting   //=====
 
