@@ -12,10 +12,6 @@ Iron -> Bronze
 Gold -> Diamond
 Steel -> Netherite
 
-Raw copper tools -> Smelt copper on a campfire -> Use copper to make a furnace (possible under the right circumstances in real-life)
-
-Steel requires blast furnace which now requires Bronze
-
 ===============
 
 =====//   Crafting   //=====
@@ -31,3 +27,13 @@ Beds now take longer to craft
 	Beds only skip the night if the player crafts it using a "Soft Pillow", crafting a "Comfy Bed"
 
 	Standard beds only set the player spawn point, while "comfy" beds work like vanilla beds.
+
+===============
+
+Copper Changes:
+
+Raw copper tools -> Smelt copper on a campfire -> Use copper to make a furnace (possible under the right circumstances in real-life)
+
+Steel requires blast furnace which now requires Bronze
+
+===============
