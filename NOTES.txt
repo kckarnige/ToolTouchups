@@ -20,9 +20,7 @@ Steel requires blast furnace which now requires Bronze
 
 =====//   Crafting   //=====
 
-Colored string exists now! (being held at gun point by a friend)
-
-Killing sheep drops string instead of wool (!!MAKE SURE WOOL CAN TURN BACK INTO STRING!!)
+Killing sheep drops string instead of wool ( ! ! MAKE SURE WOOL CAN TURN BACK INTO STRING ! ! )
 
 Beds now take longer to craft
 

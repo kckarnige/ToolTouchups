@@ -2,16 +2,30 @@
   "schemaVersion": 1,
   "id": "betterthanprogression",
   "version": "${version}",
-  "name": "Better Than Progression",
-  "description": "Overhauls Minecraft’s progression with new items, new gear, and new ways to craft. You didn’t ask for it, but I didn't ask you, did I?",
-  "authors": [],
-  "contact": {},
+  "name": "Sticks n' Stones: Better Than Progression",
+  "description": "Overhauls Minecraft's progression with new items, new gear, and new ways to craft. You didn't ask for it, but I didn't ask you, did I?",
+  "authors": [
+    "KiCKTheBucket"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/better-than-progression",
+    "sources": "https://github.com/kckarnige/BetterThanProgression",
+    "issues": "https://github.com/kckarnige/BetterThanProgression/issues"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/better-than-progression",
+        "modmenu.kofi": "https://ko-fi.com/kckarnige"
+      }
+    }
+  },
   "license": "MPL-2.0",
   "icon": "assets/betterthanprogression/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "com.kckarnige.betterthanprogression.client.BetterthanprogressionDataGenerator"
+      "com.kckarnige.betterthanprogression.client.datagen.DataGenerator"
     ],
     "client": [
       "com.kckarnige.betterthanprogression.client.BetterthanprogressionClient"
@@ -21,11 +35,7 @@
     ]
   },
   "mixins": [
-    "betterthanprogression.mixins.json",
-    {
-      "config": "betterthanprogression.client.mixins.json",
-      "environment": "client"
-    }
+    "betterthanprogression.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

@@ -11,12 +11,10 @@ base {
 }
 
 loom {
-    splitEnvironmentSourceSets()
 
     mods {
         "betterthanprogression" {
             sourceSet sourceSets.main
-            sourceSet sourceSets.client
         }
     }
 }

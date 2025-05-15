@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "betterthanprogression:pillow",
+    "-": "#minecraft:planks",
+    "=": "betterthanprogression:cloth",
+    "w": "minecraft:red_wool"
+  },
+  "pattern": [
+    "#==",
+    "www",
+    "---"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:red_bed"
+  }
+}

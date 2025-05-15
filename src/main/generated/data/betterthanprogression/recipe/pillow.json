@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:white_wool",
+    "-": "minecraft:feather",
+    "=": "betterthanprogression:cloth"
+  },
+  "pattern": [
+    "===",
+    "-#-",
+    "==="
+  ],
+  "result": {
+    "count": 1,
+    "id": "betterthanprogression:pillow"
+  }
+}

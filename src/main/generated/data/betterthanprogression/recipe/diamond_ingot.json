@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "betterthanprogression:steel_ingot",
+    "betterthanprogression:steel_ingot",
+    "betterthanprogression:steel_ingot",
+    "betterthanprogression:steel_ingot",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betterthanprogression:diamond_ingot"
+  }
+}
