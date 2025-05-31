@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "betterthanprogression:steel"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "betterthanprogression:steel"
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-package com.kckarnige.betterthanprogression;
+package com.kckarnige.betterthanprogression.blocks;
 
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -18,6 +18,9 @@ import java.util.UUID;
 
 public class BedChanges {
 
+    // Maps: Bed position -> Owner UUID
+    private static final Map<BlockPos, UUID> bedOwners = new HashMap<>();
+    // Maps: Player UUID -> Their bed spawn position
     private static final Map<UUID, BlockPos> spawnBeds = new HashMap<>();
 
     public static void registerBedUseCallback() {
@@ -40,15 +43,32 @@ public class BedChanges {
             }
 
             UUID playerId = serverPlayer.getUuid();
-            BlockPos trackedSpawn = spawnBeds.get(playerId);
+            UUID currentOwner = bedOwners.get(pos);
 
-            if (pos.equals(trackedSpawn)) {
-                serverPlayer.sendMessage(Text.translatable("block.betterthanprogression.already_set_spawn"), false);
-            } else {
-                spawnBeds.put(playerId, pos);
-                serverPlayer.setSpawnPoint(world.getRegistryKey(), pos, 0.0f, true, false);
-                serverPlayer.sendMessage(Text.translatable("block.minecraft.set_spawn"), false);
+            // Prevent other players from using this bed
+            if (currentOwner != null && !currentOwner.equals(playerId)) {
+                serverPlayer.sendMessage(Text.translatable("block.minecraft.bed.occupied"), true);
+                return ActionResult.FAIL;
             }
+
+            // If already set
+            if (pos.equals(spawnBeds.get(playerId))) {
+                serverPlayer.sendMessage(Text.translatable("block.betterthanprogression.already_set_spawn"), true);
+            } else {
+                // Remove previous spawn ownership if exists
+                BlockPos oldBed = spawnBeds.get(playerId);
+                if (oldBed != null) {
+                    bedOwners.remove(oldBed);
+                }
+
+                // Set new ownership and spawnpoint
+                spawnBeds.put(playerId, pos);
+                bedOwners.put(pos, playerId);
+
+                serverPlayer.setSpawnPoint(world.getRegistryKey(), pos, 0.0f, true, false);
+                serverPlayer.sendMessage(Text.translatable("block.minecraft.set_spawn"), true);
+            }
+
             player.swingHand(hand, true);
             return ActionResult.SUCCESS;
         });
@@ -60,25 +80,21 @@ public class BedChanges {
                 return true;
             }
 
-            // Get head of the bed
+            // Always get the head of the bed
             if (state.get(BedBlock.PART) != BedPart.HEAD) {
                 Direction facing = state.get(BedBlock.FACING);
                 pos = pos.offset(facing);
             }
 
-            // Remove spawn association for any player
-            BlockPos finalPos = pos;
-            spawnBeds.entrySet().removeIf(entry -> {
-                if (entry.getValue().equals(finalPos)) {
-                    ServerPlayerEntity serverPlayer = Objects.requireNonNull(world.getServer()).getPlayerManager().getPlayer(entry.getKey());
-                    if (serverPlayer != null) {
-                        serverPlayer.sendMessage(Text.translatable("block.minecraft.spawn.not_valid"), false);
-                        serverPlayer.setSpawnPoint(null, null, 0.0f, false, false);
-                    }
-                    return true;
+            UUID owner = bedOwners.remove(pos);
+            if (owner != null) {
+                spawnBeds.remove(owner);
+                ServerPlayerEntity ownerPlayer = Objects.requireNonNull(world.getServer()).getPlayerManager().getPlayer(owner);
+                if (ownerPlayer != null) {
+                    ownerPlayer.sendMessage(Text.translatable("block.minecraft.spawn.not_valid"), false);
+                    ownerPlayer.setSpawnPoint(null, null, 0.0f, false, false);
                 }
-                return false;
-            });
+            }
 
             return true;
         });

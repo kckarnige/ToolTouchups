@@ -129,6 +129,16 @@ public class recipes extends FabricRecipeProvider {
                         .criterion(hasItem(ItemRegister.STEEL_INGOT), conditionsFromItem(ItemRegister.STEEL_INGOT))
                         .offerTo(exporter, "steel_ingot_from_nuggets");
 
+                createShaped(RecipeCategory.MISC, ItemRegister.TOTEM_OF_SAFEKEEPING)
+                        .pattern("#C#")
+                        .pattern("#T#")
+                        .pattern("###")
+                        .input('C', Blocks.CHEST)
+                        .input('#', ItemRegister.DIAMOND_INGOT)
+                        .input('T', ItemRegister.TOTEM_OF_SAFEKEEPING)
+                        .criterion(hasItem(ItemRegister.TOTEM_OF_SAFEKEEPING), conditionsFromItem(ItemRegister.TOTEM_OF_SAFEKEEPING))
+                        .offerTo(exporter);
+
                 createShapeless(RecipeCategory.MISC, ItemRegister.STEEL_INGOT, 9)
                         .input(BlockRegister.STEEL_BLOCK)
                         .criterion(hasItem(ItemRegister.STEEL_INGOT), conditionsFromItem(ItemRegister.STEEL_INGOT))

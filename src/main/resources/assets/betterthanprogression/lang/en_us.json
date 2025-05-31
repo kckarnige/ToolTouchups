@@ -1,6 +1,7 @@
 {
-    "block.betterthanprogression.already_set_spawn": "You already set this as your home bed",
+    "block.betterthanprogression.already_set_spawn": "You've already claimed this bed",
 
+    "item.betterthanprogression.totem_of_safekeeping": "Totem of Safekeeping",
     "item.betterthanprogression.cloth": "Cloth",
     "item.betterthanprogression.pillow": "Pillow",
 
@@ -9,5 +10,17 @@
     "block.betterthanprogression.steel_block": "Steel Block",
 
     "item.betterthanprogression.diamond_ingot": "Diamond Ingot",
-    "item.betterthanprogression.tin_nugget": "Tin Nugget"
+    "item.betterthanprogression.tin_nugget": "Tin Nugget",
+
+    
+    "item.betterthanprogression.steel_helmet": "Steel Helmet",
+    "item.betterthanprogression.steel_chestplate": "Steel Chestplate",
+    "item.betterthanprogression.steel_leggings": "Steel Leggings",
+    "item.betterthanprogression.steel_boots": "Steel Boots",
+
+    "item.betterthanprogression.steel_shovel": "Steel Shovel",
+    "item.betterthanprogression.steel_pickaxe": "Steel Pickaxe",
+    "item.betterthanprogression.steel_sword": "Steel Sword",
+    "item.betterthanprogression.steel_axe": "Steel Axe",
+    "item.betterthanprogression.steel_hoe": "Steel Hoe"
 }

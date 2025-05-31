@@ -7,14 +7,13 @@ Less Durability -> Different tools have different advantages (gold tools have a 
 ===============
 
 Upgrades:
-
 Iron -> Bronze
 Gold -> Diamond
 Steel -> Netherite
 
 ===============
 
-Totem of Keep Inventory
+Totem of Keep Inventory???
 
 =====//   Crafting   //=====
 
@@ -22,13 +21,12 @@ Killing sheep drops string instead of wool ( ! ! MAKE SURE WOOL CAN TURN BACK IN
 
 Beds now take longer to craft
 
-	Cloth can either be crafted from string, or have a chance to be dropped by zombies
+  - Cloth can either be crafted from string
 
-	A pillow can be crafted with feathers, cloth, and string. Wool can be used as a replacement for feathers to make a "Soft Pillow"
+  - A pillow can be crafted with feathers, cloth, and string. Wool can be used as a replacement for feathers to make a "Soft Pillow"
 
-	Beds only skip the night if the player crafts it using a "Soft Pillow", crafting a "Comfy Bed"
+  - Beds no longer skip the night, only setting the player's spawn point
 
-	Standard beds only set the player spawn point, while "comfy" beds work like vanilla beds.
 
 ===============
 
