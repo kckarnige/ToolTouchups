@@ -7,6 +7,8 @@
 
 This mod tweaks Minecraft tool progression by adding diamond ingots, the new way to craft diamond equipment, and copper tools, an upgrade from stone tools!
 
+![diamond ingot recipe](https://kckarnige.github.io/res/tooltouchups_craftExample.png)
+
 ----
 
 # Q&A 
