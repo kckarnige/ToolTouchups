@@ -13,7 +13,7 @@ base {
 loom {
 
     mods {
-        "betterthanprogression" {
+        "tooltouchups" {
             sourceSet sourceSets.main
         }
     }

@@ -1,41 +1,41 @@
 {
   "schemaVersion": 1,
-  "id": "betterthanprogression",
+  "id": "tooltouchups",
   "version": "${version}",
-  "name": "Better Than Progression",
-  "description": "Overhauls Minecraft's progression with new items, new gear, and new ways to craft. You didn't ask for it, but I didn't ask you, did I?",
+  "name": "KiCK's Tool Touch-Ups",
+  "description": "Touches up Minecraft tool progression by adding diamond ingots and copper tools.",
   "authors": [
     "KiCKTheBucket"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/better-than-progression",
-    "sources": "https://github.com/kckarnige/BetterThanProgression",
-    "issues": "https://github.com/kckarnige/BetterThanProgression/issues"
+    "homepage": "https://modrinth.com/mod/tooltouchups",
+    "sources": "https://github.com/kckarnige/tooltouchups",
+    "issues": "https://github.com/kckarnige/tooltouchups/issues"
   },
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.modrinth": "https://modrinth.com/mod/better-than-progression",
+        "modmenu.modrinth": "https://modrinth.com/mod/tooltouchups",
         "modmenu.kofi": "https://ko-fi.com/kckarnige"
       }
     }
   },
   "license": "MPL-2.0",
-  "icon": "assets/betterthanprogression/icon.png",
+  "icon": "assets/tooltouchups/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "com.kckarnige.betterthanprogression.client.datagen.DataGenerator"
+      "com.kckarnige.tooltouchups.client.datagen.DataGenerator"
     ],
     "client": [
-      "com.kckarnige.betterthanprogression.client.BetterthanprogressionClient"
+      "com.kckarnige.tooltouchups.client.tooltouchupsClient"
     ],
     "main": [
-      "com.kckarnige.betterthanprogression.Betterthanprogression"
+      "com.kckarnige.tooltouchups.tooltouchups"
     ]
   },
   "mixins": [
-    "betterthanprogression.mixins.json"
+    "tooltouchups.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

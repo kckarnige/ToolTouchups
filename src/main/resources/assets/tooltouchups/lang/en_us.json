@@ -1,0 +1,32 @@
+{
+    "block.tooltouchups.already_set_spawn": "You've already claimed this bed",
+
+    "item.tooltouchups.totem_of_safekeeping": "Totem of Safekeeping",
+    "item.tooltouchups.cloth": "Cloth",
+    "item.tooltouchups.pillow": "Pillow",
+
+    "item.tooltouchups.steel_nugget": "Steel Nugget",
+    "item.tooltouchups.steel_ingot": "Steel Ingot",
+    "block.tooltouchups.steel_block": "Steel Block",
+
+    "item.tooltouchups.diamond_ingot": "Diamond Ingot",
+    "item.tooltouchups.tin_nugget": "Tin Nugget",
+
+    
+    "item.tooltouchups.steel_helmet": "Steel Helmet",
+    "item.tooltouchups.steel_chestplate": "Steel Chestplate",
+    "item.tooltouchups.steel_leggings": "Steel Leggings",
+    "item.tooltouchups.steel_boots": "Steel Boots",
+
+    "item.tooltouchups.steel_shovel": "Steel Shovel",
+    "item.tooltouchups.steel_pickaxe": "Steel Pickaxe",
+    "item.tooltouchups.steel_sword": "Steel Sword",
+    "item.tooltouchups.steel_axe": "Steel Axe",
+    "item.tooltouchups.steel_hoe": "Steel Hoe",
+
+    "item.tooltouchups.copper_shovel": "Copper Shovel",
+    "item.tooltouchups.copper_pickaxe": "Copper Pickaxe",
+    "item.tooltouchups.copper_sword": "Copper Sword",
+    "item.tooltouchups.copper_axe": "Copper Axe",
+    "item.tooltouchups.copper_hoe": "Copper Hoe"
+}
