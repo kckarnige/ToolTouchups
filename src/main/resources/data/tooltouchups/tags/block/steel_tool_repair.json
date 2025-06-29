@@ -1,8 +1,0 @@
-{
-  "values": [
-    "#minecraft:incorrect_for_iron_tool"
-  ],
-  "remove": [
-    "#tooltouchups:needs_steel_tool"
-  ]
-}

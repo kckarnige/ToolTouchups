@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "-": {
       "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "tooltouchups:diamond_ingot"
     }
   },
   "pattern": [
+    "X",
     "#",
-    "-",
-    "-"
+    "#"
   ],
   "result": {
     "count": 1,
-    "id": "tooltouchups:copper_shovel"
+    "id": "minecraft:diamond_shovel"
   }
 }

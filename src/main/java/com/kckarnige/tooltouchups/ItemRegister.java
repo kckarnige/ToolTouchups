@@ -4,49 +4,27 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import static com.kckarnige.tooltouchups.tooltouchups.MOD_ID;
 import static com.kckarnige.tooltouchups.ToolMaterials.COPPER;
 
 public class ItemRegister {
-    public static final Item DIAMOND_INGOT = registerItem("diamond_ingot", new Item.Settings());
-    public static final Item COPPER_SWORD = registerSwordItem("copper_sword",
-            new Item.Settings(), COPPER, 3.0F, -2.4F);
-    public static final Item COPPER_SHOVEL = registerShovelItem("copper_shovel",
-            new Item.Settings(), COPPER, 1.0F, -3.0F);
-    public static final Item COPPER_PICKAXE = registerPickaxeItem("copper_pickaxe",
-            new Item.Settings(), COPPER, 1.0F, -2.8F);
-    public static final Item COPPER_AXE = registerAxeItem("copper_axe",
-            new Item.Settings(), COPPER, 5.0F, -3.2F);
-    public static final Item COPPER_HOE = registerHoeItem("copper_hoe",
-            new Item.Settings(), COPPER, -1.0F, -1.0F);
+    public static final Item DIAMOND_INGOT = registerItem("diamond_ingot", new Item(new Item.Settings()));
+    public static final Item COPPER_SWORD = registerItem("copper_sword",
+            new SwordItem(COPPER, (new Item.Settings()).attributeModifiers(SwordItem.createAttributeModifiers(COPPER, 3, -2.4F))));
+    public static final Item COPPER_SHOVEL = registerItem("copper_shovel",
+            new ShovelItem(COPPER, (new Item.Settings()).attributeModifiers(ShovelItem.createAttributeModifiers(COPPER, 1.5F, -3.0F))));
+    public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe",
+            new PickaxeItem(COPPER, (new Item.Settings()).attributeModifiers(PickaxeItem.createAttributeModifiers(COPPER, 1.0F, -2.8F))));
+    public static final Item COPPER_AXE = registerItem("copper_axe",
+            new AxeItem(COPPER, (new Item.Settings()).attributeModifiers(AxeItem.createAttributeModifiers(COPPER, 7.0F, -3.2F))));
+    public static final Item COPPER_HOE = registerItem("copper_hoe",
+            new HoeItem(COPPER, (new Item.Settings()).attributeModifiers(HoeItem.createAttributeModifiers(COPPER, -1.0F, -1.0F))));
 
-    private static Item registerItem (String id, Item.Settings item) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new Item(item.registryKey(key)));
-    }
-    private static Item registerSwordItem (String id, Item.Settings item, ToolMaterial material, float atkDmg, float atkSpeed) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new SwordItem(material, atkDmg, atkSpeed, item.registryKey(key)));
-    }
-    private static Item registerShovelItem (String id, Item.Settings item, ToolMaterial material, float atkDmg, float atkSpeed) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new ShovelItem(material, atkDmg, atkSpeed, item.registryKey(key)));
-    }
-    private static Item registerPickaxeItem (String id, Item.Settings item, ToolMaterial material, float atkDmg, float atkSpeed) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new PickaxeItem(material, atkDmg, atkSpeed, item.registryKey(key)));
-    }
-    private static Item registerAxeItem (String id, Item.Settings item, ToolMaterial material, float atkDmg, float atkSpeed) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new AxeItem(material, atkDmg, atkSpeed, item.registryKey(key)));
-    }
-    private static Item registerHoeItem (String id, Item.Settings item, ToolMaterial material, float atkDmg, float atkSpeed) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, id));
-        return Registry.register(Registries.ITEM, key, new HoeItem(material, atkDmg, atkSpeed, item.registryKey(key)));
+
+    private static Item registerItem (String id, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);
     }
 
 

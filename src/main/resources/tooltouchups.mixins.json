@@ -4,6 +4,7 @@
   "package": "com.kckarnige.tooltouchups.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "VanillaToolChanges"
   ],
   "injectors": {
     "defaultRequire": 1
