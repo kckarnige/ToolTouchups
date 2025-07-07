@@ -6,6 +6,7 @@
 
 [![modrinth-gallery](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/modrinth-gallery_64h.png)](https://modrinth.com/mod/tooltouchups/gallery) [![kofi-singular](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_64h.png)](https://ko-fi.com/kckarnige) [![buymeacoffee-singular](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/buymeacoffee-singular_64h.png)](https://www.buymeacoffee.com/kckarnige)
 
+(This was created before copper tools officially became official!)
 
 This small mod tweaks Minecraft tool progression by adding diamond ingots, the new way to craft diamond equipment, and copper tools, an upgrade from stone tools!
 
